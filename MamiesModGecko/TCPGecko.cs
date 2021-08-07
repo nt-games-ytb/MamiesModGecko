@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using MamiesModGecko
+using MamiesModGecko;
 
 namespace MamiesModGecko
 {
