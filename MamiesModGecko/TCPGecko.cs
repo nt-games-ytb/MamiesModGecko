@@ -78,7 +78,7 @@ namespace MamiesModGecko
 
     public class TCPGecko
     {
-        private TcpConn ptcp;
+        private TCPConn ptcp;
 
         #region base constants
         private const UInt32 packetsize = 0x400;
@@ -103,9 +103,9 @@ namespace MamiesModGecko
 
         private bool CancelDump { get; set; }
 
-        public TCPGecko(string host, int port)
+        public TCPGecko(string ip)
         {
-            this.ptcp = new TcpConn(host, port);
+            this.ptcp = new TCPConn(ip, 7331);
             this.Connected = false;
             this.PChunkUpdate = null;
         }
@@ -744,12 +744,12 @@ namespace MamiesModGecko
         }
         #endregion
 
-        public void convertToUint(int nombre)
+        public void convertToUint(int number)
         {
-            Convert.ToUInt32(nombre);
+            Convert.ToUInt32(number);
         }
 
-        public void copyValueToString (uint startAddress, uint endAddress, string text)
+        public void copyValueToString(uint startAddress, uint endAddress, string text)
         {
             uint nombre = endAddress - startAddress;
             for (int x = 0; x < nombre;)
@@ -758,6 +758,52 @@ namespace MamiesModGecko
                 x = x + 4;
             }
         }
-        #endregion
+
+        public void simplyConnect()
+        {
+            try
+            {
+                this.ptcp.Connect();
+            }
+            catch (IOException)
+            {
+                this.Disconnect();
+                throw new ETCPGeckoException(ETCPErrorCode.noTCPGeckoFound);
+            }
+
+            System.Threading.Thread.Sleep(150);
+            this.Connected = true;
+        }
+        
     }
+
+    public class BeforeConnect
+    {
+        public BeforeConnect()
+        {
+        }
+
+        public bool ValidateIPv4(string ipString)
+        {
+            if (String.IsNullOrWhiteSpace(ipString))
+            {
+                return false;
+            }
+
+            if (ipString == "127.0.0.1")
+            {
+                return false;
+            }
+
+            string[] splitValues = ipString.Split('.');
+
+            if (splitValues.Length != 4)
+            {
+                return false;
+            }
+
+            return splitValues.All(r => byte.TryParse(r, out byte tempForParsing));
+        }
+    }
+    #endregion
 }

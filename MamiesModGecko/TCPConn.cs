@@ -7,12 +7,12 @@ using System.Windows.Forms;
 namespace MamiesModGecko
 {
 
-    public class TcpConn
+    public class TCPConn
     {
         private TcpClient client;
         private NetworkStream stream;
 
-        public TcpConn(string host, int port)
+        public TCPConn(string host, int port)
         {
             this.Host = host;
             this.Port = port;
