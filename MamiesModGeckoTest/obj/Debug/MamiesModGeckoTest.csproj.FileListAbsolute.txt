@@ -1,0 +1,10 @@
+C:\Users\toron\source\repos\MamiesModGeckoTest\bin\Debug\MamiesModGeckoTest.exe.config
+C:\Users\toron\source\repos\MamiesModGeckoTest\bin\Debug\MamiesModGeckoTest.exe
+C:\Users\toron\source\repos\MamiesModGeckoTest\bin\Debug\MamiesModGeckoTest.pdb
+C:\Users\toron\source\repos\MamiesModGeckoTest\obj\Debug\MamiesModGeckoTest.csproj.AssemblyReference.cache
+C:\Users\toron\source\repos\MamiesModGeckoTest\obj\Debug\MamiesModGeckoTest.Form1.resources
+C:\Users\toron\source\repos\MamiesModGeckoTest\obj\Debug\MamiesModGeckoTest.Properties.Resources.resources
+C:\Users\toron\source\repos\MamiesModGeckoTest\obj\Debug\MamiesModGeckoTest.csproj.GenerateResource.cache
+C:\Users\toron\source\repos\MamiesModGeckoTest\obj\Debug\MamiesModGeckoTest.csproj.CoreCompileInputs.cache
+C:\Users\toron\source\repos\MamiesModGeckoTest\obj\Debug\MamiesModGeckoTest.exe
+C:\Users\toron\source\repos\MamiesModGeckoTest\obj\Debug\MamiesModGeckoTest.pdb
