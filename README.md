@@ -2,7 +2,7 @@
 The .NET assembly/library for connect your Wii U to your PC of MamiesMod V2 and V3 (not for MamiesMod V4 and Mobile).
 
 # How I can use it ?
-You can use it on a Csharp projet, in adding files to the projects.
+You can use it on a Csharp projet, in adding files to the projects or you can use MamiesModGeckoTest to create your real time to modding tool.
 
 # Credits
 [BullyWiiPlaza](https://www.youtube.com/user/BullyWiiPlaza) for make GeckoDotNet and JGecko U    
