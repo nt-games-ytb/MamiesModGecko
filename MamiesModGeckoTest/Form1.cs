@@ -27,7 +27,7 @@ namespace MamiesModGeckoTest
         {
 
         }
-
+        
         private void ipText_TextChanged(object sender, EventArgs e)
         {
             try
@@ -49,13 +49,39 @@ namespace MamiesModGeckoTest
 
         private void connect_Click(object sender, EventArgs e)
         {
-            MamiesModGecko = new TCPGecko(ipText.Text);
-            MamiesModGecko.simplyConnect();
+            try
+            {
+                MamiesModGecko = new TCPGecko(ipText.Text);
+                MamiesModGecko.simplyConnect();
+                GetNintendoNetwork();
+
+                ipText.Enabled = false;
+                connect.Enabled = false;
+                disconnect.Enabled = true;
+                xray.Enabled = true;
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show(ex.Message, "MamiesModGecko Test");
+            }
+            catch (System.Net.Sockets.SocketException)
+            {
+                MessageBox.Show("Error: your ip is not the right one or you are not connected to the internet !", "MamiesModGecko Test");
+            }
+            catch
+            {
+                MessageBox.Show("An unknown error has occurred !", "MamiesModGecko Test");
+            }
         }
 
         private void disconnect_Click(object sender, EventArgs e)
         {
             MamiesModGecko.Disconnect();
+
+            ipText.Enabled = true;
+            connect.Enabled = true;
+            disconnect.Enabled = false;
+            xray.Enabled = false;
         }
 
         private void xray_CheckedChanged(object sender, EventArgs e)
