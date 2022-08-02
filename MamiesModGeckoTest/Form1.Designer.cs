@@ -42,7 +42,7 @@ namespace MamiesModGeckoTest
             this.ipText.Name = "ipText";
             this.ipText.Size = new System.Drawing.Size(100, 22);
             this.ipText.TabIndex = 0;
-            this.ipText.Text = "192.168.1.48";
+            this.ipText.Text = "192.168.1.";
             this.ipText.TextChanged += new System.EventHandler(this.ipText_TextChanged);
             // 
             // connect
@@ -53,7 +53,7 @@ namespace MamiesModGeckoTest
             this.connect.Name = "connect";
             this.connect.Size = new System.Drawing.Size(125, 23);
             this.connect.TabIndex = 1;
-            this.connect.Text = "Se connecter";
+            this.connect.Text = "Connect";
             this.connect.UseVisualStyleBackColor = true;
             this.connect.Click += new System.EventHandler(this.connect_Click);
             // 
@@ -65,18 +65,19 @@ namespace MamiesModGeckoTest
             this.disconnect.Name = "disconnect";
             this.disconnect.Size = new System.Drawing.Size(125, 23);
             this.disconnect.TabIndex = 2;
-            this.disconnect.Text = "Se déconnecter";
+            this.disconnect.Text = "Disconnect";
             this.disconnect.UseVisualStyleBackColor = true;
             this.disconnect.Click += new System.EventHandler(this.disconnect_Click);
             // 
             // xray
             // 
             this.xray.AutoSize = true;
+            this.xray.Enabled = false;
             this.xray.Location = new System.Drawing.Point(13, 41);
             this.xray.Name = "xray";
-            this.xray.Size = new System.Drawing.Size(45, 17);
+            this.xray.Size = new System.Drawing.Size(113, 17);
             this.xray.TabIndex = 3;
-            this.xray.Text = "xray";
+            this.xray.Text = "xray (for Minecraft)";
             this.xray.UseVisualStyleBackColor = true;
             this.xray.CheckedChanged += new System.EventHandler(this.xray_CheckedChanged);
             // 
@@ -84,7 +85,7 @@ namespace MamiesModGeckoTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 144);
+            this.ClientSize = new System.Drawing.Size(384, 111);
             this.Controls.Add(this.xray);
             this.Controls.Add(this.disconnect);
             this.Controls.Add(this.connect);
