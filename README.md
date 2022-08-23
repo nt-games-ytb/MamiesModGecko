@@ -2,7 +2,7 @@
 All the files of MamiesModGecko, a .NET framework library for connect your Wii U to your PC.    
 It is made to be used with the [BullyWiiPlaza's TCP Gecko](https://github.com/BullyWiiPlaza/tcpgecko) or other applications derived from this such as [MamiesMod Wii U](https://github.com/nt-games-ytb/MamiesMod-Wii-U).    
 The repositorie contain also MamiesModGeckoTest, a simple RTM Tool exemple which uses MamiesModGecko.    
-the files are named as follows "year month day".
+the files are named as follows "year month day".    
 This library is used especially in MamiesMod V2 and V3 (not in MamiesMod V4 and Mobile).    
 
 # How I can use it ?
